@@ -34,8 +34,10 @@
   },
   "type": "module",
   "dependencies": {
+    "@sveltejs/enhanced-img": "^0.3.3",
     "bits-ui": "^0.21.13",
     "clsx": "^2.1.1",
+    "lucide-svelte": "^0.428.0",
     "mode-watcher": "^0.4.1",
     "tailwind-merge": "^2.4.0",
     "tailwind-variants": "^0.2.1"
