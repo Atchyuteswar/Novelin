@@ -7,41 +7,60 @@
 	const featuredBooks = [
 		{
 			src: book2,
-			name: 'Photo by Parth Shah'
+			name: 'Photo by Parth Shah',
+			text: {
+				head: 'Upload Your Books',
+				body: 'Share your stories with the world and reach a wide audience.'
+			}
 		},
 		{
 			src: book3,
-			name: 'Photo by Brett McCutcheon'
+			name: 'Photo by Brett McCutcheon',
+			text: {
+				head: 'Read for Free',
+				body: 'Access a vast library of books without any cost.'
+			}
 		},
 		{
 			src: book4,
-			name: 'Photo by Perfecto Capucine'
+			name: 'Photo by Perfecto Capucine',
+			text: {
+				head: 'Connect',
+				body: 'Join our community, share your thoughts, and discover new favorites.'
+			}
 		}
 	];
 </script>
 
 <main class="min-h-screen">
-	<div class="container mx-auto p-6">
+	<div class="container relative mx-auto p-6">
 		<AspectRatio ratio={16 / 9} class="bg-muted">
 			<enhanced:img
 				src={book1}
 				alt="Photo by Jess Bailey"
-				class="h-full w-full rounded-md object-cover"
+				class="h-full w-full rounded-md object-cover brightness-[.5]"
 			/>
 		</AspectRatio>
+		<h1
+			class="absolute bottom-10 right-7 text-center text-2xl font-bold text-yellow-400 dark:text-yellow-300 md:text-3xl lg:text-5xl"
+		>
+			Dive into a World of Stories
+		</h1>
 	</div>
 
-	<h1 class="text-center text-2xl text-yellow-400 dark:text-yellow-300 md:text-3xl lg:text-5xl">
-		Dive into a World of Stories
-	</h1>
 	<div class="mx-auto flex flex-col space-y-6 p-6 lg:flex-row lg:space-x-6 lg:space-y-0">
 		{#each featuredBooks as book}
-			<div class="aspect-square bg-muted lg:aspect-[1/2]">
+			<div class="relative aspect-square bg-muted lg:aspect-[1/2]">
 				<enhanced:img
 					src={book.src}
-					alt="Photo by Jess Bailey"
-					class="size-full rounded-md object-cover"
+					alt={book.name}
+					class="size-full rounded-md object-cover brightness-[.7]"
 				/>
+				<h3
+					class="absolute bottom-0 right-7 p-3 font-mono text-xl text-yellow-400 shadow-red-700 [text-shadow:_2px_1px_1px_var(--tw-shadow-color)] dark:text-yellow-300 md:text-2xl lg:text-3xl"
+				>
+					{book.text.body}
+				</h3>
 			</div>
 		{/each}
 	</div>
