@@ -4,6 +4,7 @@
 	import book2 from '$lib/img/pexels-itismowgli-824197.jpg?enhanced';
 	import book3 from '$lib/img/pexels-mccutcheon-1148399.jpg?enhanced';
 	import book4 from '$lib/img/pexels-perfecto-capucine-515848-1329571.jpg?enhanced';
+	import { AudioLines, BookHeart, Heart } from 'lucide-svelte';
 	const featuredBooks = [
 		{
 			src: book2,
@@ -54,7 +55,7 @@
 				<enhanced:img
 					src={book.src}
 					alt={book.name}
-					class="size-full rounded-md object-cover brightness-[.7]"
+					class="size-full rounded-md object-cover brightness-[.6]"
 				/>
 				<h3
 					class="absolute bottom-0 right-7 p-3 font-mono text-xl text-yellow-400 shadow-red-700 [text-shadow:_2px_1px_1px_var(--tw-shadow-color)] dark:text-yellow-300 md:text-2xl lg:text-3xl"
@@ -65,3 +66,14 @@
 		{/each}
 	</div>
 </main>
+<section class="p-10">
+	<h3 class="text-2xl md:text-4xl">
+		<span class="flex items-center">
+			We're bookworms, <BookHeart size={30} />
+		</span>
+		<span class="flex items-center"> storytellers, <AudioLines size={30} /> </span>
+		<span class="flex items-center"> and dreamers at heart. <Heart size={30} /> </span>
+		Our digital library is home to thousands of titles, from classic novels to the latest bestsellers.
+		Find your next favorite read on NovelIn!
+	</h3>
+</section>
