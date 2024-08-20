@@ -74,6 +74,9 @@
 		<span class="flex items-center"> storytellers, <AudioLines size={30} /> </span>
 		<span class="flex items-center"> and dreamers at heart. <Heart size={30} /> </span>
 		Our digital library is home to thousands of titles, from classic novels to the latest bestsellers.
-		Find your next favorite read on NovelIn!
+		Find your next favorite read on
+		<span class="underline decoration-yellow-400 decoration-double underline-offset-4">
+			NovelIn!
+		</span>
 	</h3>
 </section>
